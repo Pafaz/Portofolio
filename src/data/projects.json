@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "title": "Manajemen Magang",
+    "role" : "Backend",
+    "description": "Platform for managing internships, providing a user-friendly interface for job seekers and employers",
+    "image": "/images/projects/manajemen-magang.jpeg",
+    "technologies": ["React", "Laravel", "MySQL", "Tailwind CSS", "Redis", "Vercel"],
+    "githubUrl": "https://github.com/Pafaz/Manajemen-magang",
+    "liveUrl": "https://manajemen-magang.vercel.app/",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "title": "SPK Beasiswsa PIP",
+    "role" : "Backend",
+    "description": "A web-based application that provides a user-friendly interface for evaluating PIP candidates and providing personalized recommendations",
+    "image": "/images/projects/spk-pip.jpeg",
+    "technologies": ["Next", "Hapi", "Javascript", "PostgreSQL", "Vercel", "Railway"],
+    "githubUrl": "https://github.com/Tagenshin/capstone_spk_pip",
+    "liveUrl": "https://rekomendasi-pip.vercel.app",
+    "featured": true
+  },
+  {
+    "id": "3",
+    "title": "Pawonkoe",
+    "role" : "Full-Stack",
+    "description": "Application for managing UMKM Pawonkoe with management POS, inventory, and sales",
+    "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "technologies": ["Next", "Laravel", "MySQL", "Tailwind CSS"],
+    "githubUrl": "https://github.com/NasFahmi/AdminPawonkoe",
+    "liveUrl": "/",
+    "featured": false
+  },
+  {
+    "id": "4",
+    "title": "UMKM Sukojati",
+    "role" : "Full-Stack",
+    "description": "A web-based application that provides a user-friendly interface for UMKM in Sukojati",
+    "image": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "technologies": ["WordPress"],
+    "githubUrl": "/",
+    "liveUrl": "/",
+    "featured": false
+  }
+]
