@@ -72,8 +72,8 @@ export const Navbar: React.FC = () => {
   return (
     <motion.nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl border-b border-gray-200/50 dark:border-gray-700/50'
-          : 'bg-transparent'
+        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl border-b border-gray-200/50 dark:border-gray-700/50'
+        : 'bg-transparent'
         }`}
       variants={navVariants}
       initial="hidden"
@@ -90,7 +90,7 @@ export const Navbar: React.FC = () => {
             aria-label="Go to homepage"
           >
             <motion.div
-              className="relative p-3 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-xl shadow-lg"
+              className="relative p-2 md:p-3 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-xl shadow-lg"
               whileHover={{
                 scale: 1.05,
                 rotate: [0, -5, 5, 0],
@@ -99,25 +99,28 @@ export const Navbar: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
             >
-              <Code2 className="h-7 w-7 text-white" />
+              <Code2 className="h-6 w-6 md:h-7 md:w-7 text-white" />
               <motion.div
                 className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-xl"
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
             </motion.div>
+
             <motion.div
               whileHover={{ x: 5 }}
               transition={{ duration: 0.2 }}
+              className="flex flex-col"
             >
-              <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              <span className="text-lg md:text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 Paundra Afif Zamroni
               </span>
-              <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+              <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
                 Full-Stack Developer
               </div>
             </motion.div>
           </Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-2">
@@ -136,8 +139,8 @@ export const Navbar: React.FC = () => {
                   <Link
                     to={item.href}
                     className={`relative flex items-center space-x-2 px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 group focus:outline-none focus:ring-4 focus:ring-primary-500 focus:ring-opacity-50 overflow-hidden ${isActive
-                        ? 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20'
-                        : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
+                      ? 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
                       }`}
                     aria-label={`Navigate to ${item.name} page`}
                     aria-current={isActive ? 'page' : undefined}
@@ -267,8 +270,8 @@ export const Navbar: React.FC = () => {
                     <Link
                       to={item.href}
                       className={`flex items-center space-x-3 px-4 py-3 text-base font-medium rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary-500 focus:ring-opacity-50 ${isActive
-                          ? 'bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 text-primary-600 dark:text-primary-400 border-l-4 border-primary-600 dark:border-primary-400'
-                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 hover:text-primary-600 dark:hover:text-primary-400'
+                        ? 'bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 text-primary-600 dark:text-primary-400 border-l-4 border-primary-600 dark:border-primary-400'
+                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 hover:text-primary-600 dark:hover:text-primary-400'
                         }`}
                       aria-current={isActive ? 'page' : undefined}
                     >

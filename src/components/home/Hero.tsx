@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
 
   return (
     <section 
-      className="min-h-dvh flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
       role="banner"
       aria-label="Hero section introducing the developer"
     >
