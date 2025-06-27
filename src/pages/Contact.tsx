@@ -267,7 +267,7 @@ export const Contact: React.FC = () => {
                       />
                     </svg>
                   )}
-                  {loading ? 'Mengirim...' : 'Kirim Pesan'}
+                  {loading ? 'Sending...' : 'Send Message'}
                 </Button>
 
               </form>
@@ -283,7 +283,7 @@ export const Contact: React.FC = () => {
                   className={`fixed bottom-6 right-6 z-50 px-5 py-3 rounded-xl shadow-lg text-white text-sm font-medium ${status === 'success' ? 'bg-green-600' : 'bg-red-600'
                     }`}
                 >
-                  {status === 'success' ? '✅ Pesan berhasil dikirim!' : '❌ Gagal mengirim pesan. Coba lagi. Atau Gunakan Whatsapp'}
+                  {status === 'success' ? '✅ message sent!' : '❌ something went wrong or use Whatsapp'}
                 </motion.div>
               )}
             </AnimatePresence>

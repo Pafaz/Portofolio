@@ -99,7 +99,7 @@ export const Navbar: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
             >
-              <Code2 className="h-6 w-6 md:h-7 md:w-7 text-white" />
+              <Code2 className="h-4 w-4 md:h-5 md:w-5 lg:h-7 lg:w-7 text-white" />
               <motion.div
                 className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-xl"
                 animate={{ opacity: [0.5, 1, 0.5] }}
@@ -112,10 +112,10 @@ export const Navbar: React.FC = () => {
               transition={{ duration: 0.2 }}
               className="flex flex-col"
             >
-              <span className="text-lg md:text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              <span className="text-sm md:text-sm lg:text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 Paundra Afif Zamroni
               </span>
-              <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+              <div className="text-xs md:text-xs lg:text-base text-gray-600 dark:text-gray-400 font-medium">
                 Full-Stack Developer
               </div>
             </motion.div>
