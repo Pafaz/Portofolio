@@ -42,5 +42,28 @@
     "githubUrl": "/",
     "liveUrl": "/",
     "featured": false
+  },
+  {
+    "id": "5",
+    "title": "City Care App",
+    "role" : "Front-End",
+    "description": "A web-based application that provides a user-friendly interface with PWA for City Care",
+    "image": "/images/projects/city-care.png",
+    "technologies": ["Javascript", "Tailwind CSS"],
+    "githubUrl": "/",
+    "liveUrl": "https://citycareapp.netlify.app/#/login",
+    "featured": false
+  },
+  {
+    "id": "6",
+    "title": "Sharing Story App",
+    "role" : "Front-End",
+    "description": "A web-based application that provides a user-friendly interface with PWA for Sharing Story",
+    "image": "/images/projects/story-app.png",
+    "technologies": ["Javascript", "Tailwind CSS"],
+    "githubUrl": "/",
+    "liveUrl": "https://sharing-story-id.netlify.app/",
+    "featured": false
   }
+  
 ]

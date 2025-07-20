@@ -146,7 +146,7 @@ export const Skills: React.FC = () => {
                     }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="flex justify-between items-center mb-3">
+                    <div className="flex justify-between items-center">
                       <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">
                         {skill.name}
                       </span>
@@ -160,81 +160,9 @@ export const Skills: React.FC = () => {
                         }}
                         viewport={{ once: true }}
                       >
-                        <Target className="h-3 w-3 text-gray-500" />
-                        <span className="text-xs font-bold text-gray-600 dark:text-gray-400">
-                          {skill.level}%
-                        </span>
                       </motion.div>
                     </div>
                     
-                    {/* Progress Bar */}
-                    <div className="relative">
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
-                        <motion.div
-                          className={`h-3 rounded-full bg-gradient-to-r ${config.color} relative overflow-hidden`}
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ 
-                            duration: 1.2, 
-                            delay: (categoryIndex * 0.2) + (skillIndex * 0.05) + 0.5,
-                            ease: "easeOut"
-                          }}
-                          viewport={{ once: true }}
-                        >
-                          {/* Shimmer Effect */}
-                          <motion.div
-                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                            animate={{ x: ["-100%", "100%"] }}
-                            transition={{
-                              duration: 2,
-                              repeat: Infinity,
-                              ease: "linear",
-                              delay: (categoryIndex * 0.2) + (skillIndex * 0.05) + 1.5
-                            }}
-                          />
-                        </motion.div>
-                      </div>
-                      
-                      {/* Skill Level Indicator */}
-                      <motion.div
-                        className="absolute -top-8 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 px-2 py-1 rounded text-xs font-bold"
-                        style={{ left: `${Math.max(0, Math.min(skill.level - 5, 90))}%` }}
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ 
-                          delay: (categoryIndex * 0.2) + (skillIndex * 0.05) + 1.2,
-                          duration: 0.3
-                        }}
-                        viewport={{ once: true }}
-                      >
-                        {skill.level}%
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-gray-800 dark:border-t-gray-200"></div>
-                      </motion.div>
-                    </div>
-
-                    {/* Proficiency Label */}
-                    <motion.div
-                      className="mt-2 text-center"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ 
-                        delay: (categoryIndex * 0.2) + (skillIndex * 0.05) + 1.5,
-                        duration: 0.3
-                      }}
-                      viewport={{ once: true }}
-                    >
-                      <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                        skill.level >= 90 ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300' :
-                        skill.level >= 75 ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300' :
-                        skill.level >= 60 ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300' :
-                        'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300'
-                      }`}>
-                        {skill.level >= 90 ? 'Expert' :
-                         skill.level >= 75 ? 'Advanced' :
-                         skill.level >= 60 ? 'Intermediate' :
-                         'Learning'}
-                      </span>
-                    </motion.div>
                   </motion.div>
                 ))}
               </div>
@@ -243,33 +171,6 @@ export const Skills: React.FC = () => {
         })}
       </motion.div>
 
-      {/* Skills Summary */}
-      <motion.div
-        className="mt-16 text-center"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <div className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 border border-primary-200 dark:border-gray-600">
-          <motion.div
-            className="flex items-center justify-center mb-4"
-            animate={{ rotate: [0, 360] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          >
-            <Zap className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-          </motion.div>
-          
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            Continuous Learning & Growth
-          </h3>
-          
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Technology evolves rapidly, and so do I. I'm committed to staying at the forefront of web development, 
-            constantly learning new technologies and refining my craft to deliver exceptional results.
-          </p>
-        </div>
-      </motion.div>
     </Section>
   );
 };
